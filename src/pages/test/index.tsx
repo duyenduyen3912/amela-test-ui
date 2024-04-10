@@ -1,16 +1,18 @@
 import { Col, Image, Pagination, Row } from 'antd'
 import React from 'react'
 import Filter from '../../components/Filter'
+import Header from '../../components/Header'
 import UserInfo from '../../components/userInfo'
 import styles from "./Test.module.scss"
 export default function TestManager() {
   return (
     <div className={styles.wrap}>
+        <Header title="Test manager" />
         <Row gutter={30} className={styles.row} justify={"space-between"}>
-            <Col span={4} >
+            <Col span={4} xxl={4} xl={4} lg={4} md={0} xs={0}>
                 <UserInfo />
             </Col>
-            <Col span={20}>
+            <Col span={20} xxl={20} xl={20} lg={20} md={24} xs={24}>
                 <div className={styles.test}>
                     <p className={styles.title}>Test manager</p>
                     <p className={styles.subTitle}><span style={{color: "#666161"}}>Home</span> {">"} Test quiz manager</p>

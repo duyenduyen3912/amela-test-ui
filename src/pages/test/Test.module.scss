@@ -5,6 +5,7 @@
 
 .row{
     width: 100%;
+    margin-left: 0 !important;
 }
 
 .test{
@@ -54,4 +55,17 @@ td{
 
 .action > div{
     margin-right: 8px;
+}
+
+@media screen and (max-width: 992px) {
+    .test{
+        padding: 0 0 20px 0;
+        
+    }
+    th, td{
+        font-size: 16px;
+    }
+    .icon{
+        width: 20px !important;
+    }
 }

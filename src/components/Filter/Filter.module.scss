@@ -43,3 +43,22 @@
     margin-left: 30px;
     font-size: 22px;
 }
+
+.iconWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .searchIcon{
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .icon{
+        width: 44px !important;
+    }
+}

@@ -25,6 +25,12 @@
   background-color: #F5D4D4 !important;
 }
 
+@media screen and (max-width: 992px) {
+  #menu {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 768px){
   .ant-checkbox-inner{
     width: 20px !important;

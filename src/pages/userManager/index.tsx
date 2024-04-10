@@ -1,17 +1,19 @@
 import { Col, Image, Pagination, Row } from 'antd'
 import React from 'react'
 import Filter from '../../components/Filter'
+import Header from '../../components/Header'
 import UserInfo from '../../components/userInfo'
 import styles from "./Usermanager.module.scss"
 
 export default function UserManager() {
   return (
     <div className={styles.wrap}>
+        <Header title='User Manager' />
         <Row gutter={30} className={styles.row} justify={"space-between"}>
-            <Col span={4} >
-                <UserInfo />
+            <Col span={4} xxl={4} xl={4} lg={4} md={0} xs={0}>
             </Col>
-            <Col span={20}>
+            <UserInfo />
+            <Col span={20} xxl={20} xl={20} lg={20} md={24} xs={24}>
                 <div className={styles.user}>
                     <p className={styles.title}>Home {">"} User Manager</p>
                     <Filter name='New user'/>
@@ -115,7 +117,6 @@ export default function UserManager() {
                 </div>
             </Col>
         </Row>
-        
     </div>
   )
 }

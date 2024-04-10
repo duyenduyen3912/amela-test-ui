@@ -5,6 +5,7 @@
 
 .row{
     width: 100%;
+    margin-left: 0 !important;
 }
 
 .title{
@@ -32,6 +33,9 @@
     font-size: 16px;
 }
 
+.action{
+    display: flex;
+}
 
 .action > div{
     margin-right: 20px;
@@ -46,6 +50,14 @@
 }
 
 .titleQuestion{
+    background-color: #F3F1F1;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    font-size: 22px;
+    padding: 20px 30px;
+}
+
+.titleAnswer{
     background-color: #F3F1F1;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 4px;
@@ -71,10 +83,19 @@
 
 .answer{
     margin-left: 30px;
+    background-color: #F3F1F1;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    font-size: 22px;
+    padding: 20px 30px;
 }
 
 .selected{
     margin-top: 30px;
+}
+
+.radio{
+    margin-left: 40px;
 }
 
 .answerRadio > span:nth-child(2){
@@ -90,6 +111,10 @@
     border-radius: 4px;
 }
 
+.modal{
+    padding: 20px;
+}
+
 
 .modal > div:nth-child(2) > div > div:last-child{
     padding: 40px 20px;
@@ -100,4 +125,44 @@
 
 .modal > div:nth-child(2) > div > div:last-child > button:nth-child(2) {
     margin-left: 20px;
+}
+
+@media  screen and (max-width: 992px) {
+    .user {
+        padding: 0 0 20px 0;
+    }
+    .icon{
+        width: 20px !important;
+        height: 20px;
+    }
+    .accountWrap{
+        padding: 10px;
+    }
+    .accountText{
+        font-size: 14px;
+    }
+    .titleQuestion{
+        display: none;
+    }
+    .question{
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .answerWrap{
+        padding: 0;
+    }
+    .titleAnswer, .answer{
+        font-size: 14px;
+    }
+    .btnModal{
+        padding: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 4px;
+    }
+    .radio{
+        margin: 30px 0 0 0;
+    }
 }

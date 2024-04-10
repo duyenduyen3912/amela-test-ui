@@ -1,6 +1,7 @@
 import { Col, Image, Modal, Pagination, Radio, RadioChangeEvent, Row } from 'antd'
 import React, { useState } from 'react'
 import Filter from '../../components/Filter'
+import Header from '../../components/Header'
 import UserInfo from '../../components/userInfo'
 import styles from "../userManager/Usermanager.module.scss"
 
@@ -25,11 +26,12 @@ export default function QuestionManager() {
     };
   return (
     <div className={styles.wrap}>
+        <Header title= "Question Manager" />
         <Row gutter={30} className={styles.row} justify={"space-between"}>
-            <Col span={4} >
+            <Col span={4} xxl={4} xl={4} lg={4} md={0} xs={0}>
                 <UserInfo />
             </Col>
-            <Col span={20}>
+            <Col span={20} xxl={20} xl={20} lg={20} md={24} xs={24}>
                 <div className={styles.user}>
                     <p className={styles.title}>Home {">"} User Manager</p>
                     <Filter name='New Question'/>
@@ -134,41 +136,41 @@ export default function QuestionManager() {
             ]}
         >
         <div className={styles.answerWrap}>
-            <div className={styles.titleQuestion}>
+            <div className={styles.titleAnswer}>
                     A
             </div>
-            <div className={`${styles.titleQuestion} ${styles.answer}`}>
+            <div className={` ${styles.answer}`}>
                     Phân vùng tương đương
             </div>
         </div>
         <div className={styles.answerWrap}>
-            <div className={styles.titleQuestion}>
+            <div className={styles.titleAnswer}>
                     B
             </div>
-            <div className={`${styles.titleQuestion} ${styles.answer}`}>
+            <div className={` ${styles.answer}`}>
                     Bảng quyết đinh
             </div>
         </div>
         <div className={styles.answerWrap}>
-            <div className={styles.titleQuestion}>
+            <div className={styles.titleAnswer}>
                 <b style={{color: "#26853B"}}>C</b>
                     
             </div>
-            <div className={`${styles.titleQuestion} ${styles.answer}`}>
+            <div className={` ${styles.answer}`}>
                     <b style={{color: "#26853B"}}>Unit test</b>
             </div>
         </div>
         <div className={styles.answerWrap}>
-            <div className={styles.titleQuestion}>
+            <div className={styles.titleAnswer}>
                     D
             </div>
-            <div className={`${styles.titleQuestion} ${styles.answer}`}>
+            <div className={` ${styles.answer}`}>
                     Lược đồ chuyển trạng
             </div>
         </div>
         <div className={styles.selected}>
             <span className={styles.title}>Đáp án đúng</span>
-            <span style={{marginLeft: "40px"}}>
+            <span className={styles.radio}>
                 <Radio.Group onChange={onChange} value={value}>
                     <Radio value={1} className={styles.answerRadio}>A</Radio>
                     <Radio value={2} className={styles.answerRadio}>B</Radio>
