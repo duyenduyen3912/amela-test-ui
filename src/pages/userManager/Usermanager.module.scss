@@ -1,0 +1,103 @@
+.wrap{
+    background-color: #c4c4c4;
+    min-height: 100vh;
+}
+
+.row{
+    width: 100%;
+}
+
+.title{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.user{
+    padding: 60px 10%;
+}
+
+.accountWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--subBgColor);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    padding: 8px 36px;
+    margin: 10px 0;
+}
+
+.accountText{
+    font-size: 16px;
+}
+
+
+.action > div{
+    margin-right: 20px;
+}
+
+
+
+.titleWrap{
+    display: flex;
+    background-color: #F5D4D4 !important;
+    padding-top: 12px ;
+}
+
+.titleQuestion{
+    background-color: #F3F1F1;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    font-size: 22px;
+    padding: 20px 30px;
+}
+
+.question{
+    background-color: #F3F1F1;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    font-size: 22px;
+    padding: 20px 30px;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.answerWrap{
+    display: flex;
+    margin-top: 30px;
+    padding: 0 10%;
+}
+
+.answer{
+    margin-left: 30px;
+}
+
+.selected{
+    margin-top: 30px;
+}
+
+.answerRadio > span:nth-child(2){
+    font-size: 24px !important;
+    font-weight: 600;
+}
+
+.btnModal{
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+
+.modal > div:nth-child(2) > div > div:last-child{
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal > div:nth-child(2) > div > div:last-child > button:nth-child(2) {
+    margin-left: 20px;
+}

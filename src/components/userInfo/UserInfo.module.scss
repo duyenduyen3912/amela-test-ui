@@ -1,0 +1,51 @@
+.user{
+    position: fixed;
+    padding: 40px 20px;
+    background-color: var(--subBgColor);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 16.666666666666664%;
+}
+
+.avatar{
+    margin: 0 auto 30px auto;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.icon{
+    min-width: 36px;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 0 20px;
+    text-align: center;
+}
+
+.active{
+    color: #26853B;
+}
+
+
+.logoutBtn{
+    margin: 0 auto;
+    cursor: pointer;
+    width: 174px;
+    padding: 20px 16px;
+    font-size: 20px;
+    background-color: #C9CBCB;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+}

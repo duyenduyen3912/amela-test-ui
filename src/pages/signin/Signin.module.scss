@@ -1,0 +1,170 @@
+.wrap{
+    background-image: url("../../assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.row{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 0px 8% 20px 8%;
+}
+
+.colWrap{
+    display: flex;
+    justify-content: end;
+}
+
+.popupSignin{
+    position: relative;
+    width: 750px;
+}
+
+.camera{
+    width: 157px;
+    height: 157px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgColor);
+    border-radius: 70%;
+    border: 2px solid var(--primary);
+    transform: translateY(50%);
+    padding: 5px;
+    margin: 0 auto;
+}
+
+// .cameraImg{
+//     width: 150px;
+//     height: 150px;
+// }
+
+.form{
+    padding: 19% 10%;
+    background-color: var(--bgColor);
+    border-radius: 6px;
+}
+
+.formItem{
+    margin-bottom: 70px;
+}
+
+.formInput{
+    height: 97px;
+    background-color: #F3F1F1;
+    padding: 0;
+    font-size: 20px;
+    overflow: hidden;
+    &:hover {
+        background-color: #F3F1F1;
+    }
+    &:focus-visible{
+        background-color: #F3F1F1;
+    }
+}
+
+.icon{
+    padding: 22px 34px;
+    font-size: 50px;
+    background-color: #fff;
+    margin-right: 20px;
+}
+
+.checkbox{
+    text-align: start;
+}
+
+.checkboxItem > span:nth-child(2){
+    font-size: 20px;
+}
+
+.btn{
+    margin-top: 20px;
+    width: 100%;
+    height: 70px;
+    background-color: #F3F1F1;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 992px){
+    .wrap{
+        background-image: url("../../assets/bg_mobile.png");
+        background-size: contain;
+        background-color: #000;
+    }
+
+    .row{
+        justify-content: center;
+    }
+
+    .camera{
+        width: 120px;
+        height: 120px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 768px){
+    .wrap{
+        background-image: url("../../assets/bg_mobile.png");
+        background-size: contain;
+        background-color: #000;
+    }
+
+    .row{
+        justify-content: center;
+    }
+
+    .camera{
+        width: 120px;
+        height: 120px;
+    }
+
+    .form{
+        padding: 30% 10%;
+    }
+
+    .icon{
+        font-size: 20px;
+        padding: 22px;
+    }
+
+    .formItem{
+        margin-bottom: 30px;
+    }
+
+    .formInput{
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .btn{
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        background-color: #F3F1F1;
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .checkboxItem > span:nth-child(2){
+        font-size: 16px;
+    }
+    
+}
+
+@media only screen and (max-width: 412px){
+    .camera{
+        width: 80px;
+        height: 80px;
+    }
+}
