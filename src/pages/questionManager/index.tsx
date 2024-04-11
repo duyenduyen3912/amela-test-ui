@@ -29,11 +29,11 @@ export default function QuestionManager() {
         <Header title= "Question Manager" />
         <Row gutter={30} className={styles.row} justify={"space-between"}>
             <Col span={4} xxl={4} xl={4} lg={4} md={0} xs={0}>
-                <UserInfo />
             </Col>
+            <UserInfo />
             <Col span={20} xxl={20} xl={20} lg={20} md={24} xs={24}>
                 <div className={styles.user}>
-                    <p className={styles.title}>Home {">"} User Manager</p>
+                    <p className={styles.title}>Home {">"} Question Manager</p>
                     <Filter name='New Question'/>
                     <p className={styles.title}>Tổng số câu hỏi: 38</p>
                     <div className={styles.accountWrap}>

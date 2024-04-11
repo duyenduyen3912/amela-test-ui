@@ -1,12 +1,13 @@
 import { Checkbox, Col, Drawer, Modal, Row } from 'antd'
 import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
+import { useNavigate } from 'react-router-dom'
 import Header from '../../components/Header'
 import styles from "./Exam.module.scss"
 
 export default function Exam() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    const navigate = useNavigate()
     const showModal = () => {
       setIsModalOpen(true);
     };
@@ -39,12 +40,14 @@ export default function Exam() {
                                 <Checkbox className={styles.examAnswer}>D. 8 ngày nếu làm đủ cả năm</Checkbox>
                             </div>
                         </div>
-                        <div className={styles.btnWrap}>
-                            <button className={styles.btn}>Câu trước</button>
-                            <button className={styles.btn}>Câu sau</button>
-                        </div>
-                        <div className={styles.redirectBtn}>
-                            <button className={styles.submitBtn} onClick={showModal}>Chuyển đến</button>
+                        <div>
+                            <div className={styles.btnWrap}>
+                                <button className={styles.btn}>Câu trước</button>
+                                <button className={styles.btn}>Câu sau</button>
+                            </div>
+                            <div className={styles.redirectBtn}>
+                                <button className={styles.submitBtn} onClick={showModal}>Chuyển đến</button>
+                            </div>
                         </div>
                     </div>
                 </div>     
@@ -71,13 +74,13 @@ export default function Exam() {
                         }
                     </div>
                     <div style={{textAlign: "center"}}>
-                        <button className={styles.submitBtn}>Nộp bài</button>
+                        <button className={styles.submitBtn} onClick={()=> navigate('/finish')}>Nộp bài</button>
                     </div>
                     
                 </div>
                 
             </Col>
-            <Modal open={isModalOpen} onCancel={handleCancel} className={`${styles.examNumberWrap} ${styles.modal}`}>
+            <Modal open={isModalOpen} onCancel={handleCancel} className={styles.modal}>
                     <div className={styles.examNumber}>
                         {
                             Array(16).fill(null).map((item, index) => {

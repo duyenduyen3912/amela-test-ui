@@ -3,12 +3,13 @@ import React, { useState } from 'react'
 import styles from "./Dashboard.module.scss"
 import {SearchOutlined, ClockCircleOutlined} from "@ant-design/icons"
 import type { SearchProps } from 'antd/es/input/Search';
+import { useNavigate } from 'react-router-dom';
 
 const { Search } = Input;
 export default function Dashboard() {
     const [open, setOpen] = useState(false);
     const [placement, setPlacement] = useState<DrawerProps['placement']>('left');
-
+    const navigate = useNavigate()
     const showDrawer = () => {
         setOpen(true);
     };
@@ -33,16 +34,16 @@ export default function Dashboard() {
         <Row gutter={30} className={styles.row} justify={"space-between"}>
             <Col span={4} xxl={4} xl={4} lg={4} md={0} xs={0}>
             </Col>
-                <div className={styles.user} >
-                    <div className={styles.userInfo}>
-                        <Image src={require("../../assets/avatar.png")} preview={false} className={styles.avatar} width={180}/>
-                        <p className={styles.userInfoText}>User: {" "} thanhnh@gmail.com</p>
-                        <p className={styles.userInfoText}>Point: {" "} 2488</p>
-                    </div>
-                    <button className={styles.logoutBtn}>
-                            LOGOUT
-                    </button>
+            <div className={styles.user} >
+                <div className={styles.userInfo}>
+                    <Image src={require("../../assets/avatar.png")} preview={false} className={styles.avatar} width={180} onClick={() => navigate('/user-manager')}/>
+                    <p className={styles.userInfoText} onClick={() => navigate('/user-manager')}>User: {" "} thanhnh@gmail.com</p>
+                    <p className={styles.userInfoText}>Point: {" "} 2488</p>
                 </div>
+                <button className={styles.logoutBtn}>
+                        LOGOUT
+                </button>
+            </div>
             <Col span={20} xxl={20} xl={20} lg={20} md={24} xs={24}>
                 <div className={styles.allTest}>
                     <Row className={styles.filter} gutter={34}>

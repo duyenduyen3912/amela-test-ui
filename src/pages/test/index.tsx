@@ -10,8 +10,8 @@ export default function TestManager() {
         <Header title="Test manager" />
         <Row gutter={30} className={styles.row} justify={"space-between"}>
             <Col span={4} xxl={4} xl={4} lg={4} md={0} xs={0}>
-                <UserInfo />
             </Col>
+            <UserInfo />
             <Col span={20} xxl={20} xl={20} lg={20} md={24} xs={24}>
                 <div className={styles.test}>
                     <p className={styles.title}>Test manager</p>
